@@ -9,14 +9,16 @@ import ReactDom from 'react-dom';
 import * as ReactRedux from 'react-redux';
 import * as Redux from 'redux';
 
-import {rootReducer} from '~src/reducers';
 import Root from '~src/Root';
+import store, {history} from './stores';
+import { ConnectedRouter } from 'connected-react-router';
 
-const store: Redux.Store<unknown> = Redux.createStore(rootReducer);
 
 ReactDom.render(
     <ReactRedux.Provider store={store}>
-        <Root />
+        <ConnectedRouter history={history}>
+            <Root />
+        </ConnectedRouter>
     </ReactRedux.Provider>,
     document.getElementById('root'),
 );

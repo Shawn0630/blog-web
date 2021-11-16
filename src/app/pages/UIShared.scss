@@ -1,0 +1,143 @@
+@import '../../styles/base/base.scss';
+
+.actionButton {
+    padding: 5px !important;
+    vertical-align: middle !important;
+}
+
+.track,
+.trackInset,
+.trackOverlay {
+  stroke-linecap: round;
+}
+
+.track {
+  stroke: #000;
+  stroke-opacity: 0.3;
+  stroke-width: 10px;
+}
+
+.trackInset {
+  stroke: #ddd;
+  stroke-width: 8px;
+}
+
+.trackOverlay {
+  pointer-events: stroke;
+  stroke-width: 50px;
+  cursor: crosshair;
+}
+
+.handle {
+  fill: #fff;
+  stroke: #000;
+  stroke-opacity: 0.5;
+  stroke-width: 1.25px;
+}
+
+.dropdownSelector {
+    margin-left: 10px;
+    margin-top: -5px;
+    height: 60px;
+    vertical-align: top;
+    display: inline-flex;
+}
+
+.txtDropdown {
+    vertical-align: top;
+    margin-top: auto;
+}
+
+.optionDropdown {
+    height: 48px;
+    margin-top: auto;
+
+    .button {
+        padding: 0;
+        width: 36px;
+    }
+}
+
+.dropdownIcon {
+    vertical-align: bottom;
+}
+
+div.errorPage {
+    margin: 150px auto;
+    width: 600px;
+
+    h2 {
+        text-align: center;
+        margin: 0;
+        padding: 15px 0 10px 0;
+        color: $redDark;
+    }
+    p {
+        padding: 10px 15px 30px 15px;
+        text-align: center;
+    }
+}
+
+.loaderContainer {
+    padding: 50px;
+    margin-top: 100px;
+}
+
+.loaderContent {
+    height: 100px;
+    width: 100px;
+    background-image: url(../../images/loader.gif);
+    margin: auto;
+}
+
+.dropdownWrapper {
+    display: inline-flex;
+    align-items: center;
+}
+
+.newDropdownSelector {
+    margin-left: 10px;
+    width: 80%;
+    margin-top: 10px !important;
+    vertical-align: top;
+    display: inline-flex;
+}
+
+.mutation {
+    border: 1px solid black;
+}
+
+.statusIcon {
+    span {
+        color: white;
+        font-style: normal;
+        padding: 2px 5px;
+        position: relative;
+        display: inline-block;
+        width: 70px;
+        text-align: center;
+    }
+    :global(.iconFailed) {
+        background-color: $redMedium;
+    }
+
+    :global(.iconDone) {
+        background-color: $greenMedium;
+    }
+
+    :global(.iconPending) {
+        background-color: $yellowMedium;
+    }
+
+    :global(.iconStopping) {
+        background-color: $orangeMedium;
+    }
+
+    :global(.iconDeleting) {
+        background-color: $orangeDark;
+    }
+
+    :global(.iconProcessing) {
+        background-color: $blueMedium;
+    }
+}

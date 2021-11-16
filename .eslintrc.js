@@ -33,6 +33,9 @@ module.exports = {
         'react/no-string-refs': 'off',
         'react/require-render-return': 'off',
         "@typescript-eslint/no-explicit-any": ["off"],
+        '@typescript-eslint/explicit-module-boundary-types': ['off'],
+        "@typescript-eslint/no-inferrable-types": "off",
+        '@typescript-eslint/no-non-null-assertion': 'off',
 
         'react/jsx-filename-extension': [
             'warn',

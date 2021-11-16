@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "experimentalDecorators": true,
         "outDir": "./dist",
         "module": "esnext",
         "target": "es6",
@@ -20,7 +21,7 @@
             "~images/*": ["src/images/*"],
             "~styles/*": ["src/styles/*"],
             "~models/*": ["src/models/*"],
-            "~reducers/*": ["src/reducers/*"],
+            "~reducers/*": ["src/stores/*"],
             "~utilities/*": ["src/utilities/*"],
             "~app/*": ["src/app/*"]
         },
