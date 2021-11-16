@@ -1,0 +1,19 @@
+@import '../../styles/base/base.scss';
+
+.div {
+    &-errorPage {
+        margin: 150px auto;
+        width: 600px;
+
+        h2 {
+            text-align: center;
+            margin: 0;
+            padding: 15px 0 10px 0;
+            color: $redDark;
+        }
+        p {
+            padding: 10px 15px 30px 15px;
+            text-align: center;
+        }
+    }
+}

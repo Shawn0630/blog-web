@@ -3,6 +3,7 @@
  */
 import '~styles/styles.less';
 import '~styles/styles.scss';
+import 'antd/dist/antd.less';
 
 import React from 'react';
 import ReactDom from 'react-dom';
