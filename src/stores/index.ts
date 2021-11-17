@@ -1,7 +1,7 @@
 import { routerMiddleware } from 'connected-react-router';
 import { createBrowserHistory } from 'history';
 import { applyMiddleware, compose, createStore } from 'redux';
-import rootReducer from './root-reducer';
+import rootReducer from './reducers/root-reducer';
 
 declare global {
     interface Window {

@@ -1,5 +1,6 @@
+import { Layout } from "antd";
 import * as React from "react";
-import NavigationBar from "../component/NavigationBar";
+import BlogHeader from "../component/BlogHeader";
 
 interface BlogLayoutProps {
     test: boolean
@@ -11,8 +12,8 @@ interface BlogLayoutStates {
 
 export default class BlogLayout extends React.Component<BlogLayoutProps, BlogLayoutStates> {
     public render(): JSX.Element {
-        return <React.Fragment>
-            <NavigationBar test />
-        </React.Fragment>
+        return <Layout>
+            <BlogHeader test />
+        </Layout>
     }
 }
