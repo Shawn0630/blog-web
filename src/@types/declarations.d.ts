@@ -16,6 +16,10 @@ declare module "*.svg" {
 
 declare module '*.png'
 
+interface Window {
+  INITIAL_REDUX_STATE: any
+}
+
 declare const IS_PROD: boolean;
 declare const IS_DEV: boolean;
 declare const IS_DEV_SERVER: boolean;

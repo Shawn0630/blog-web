@@ -9,11 +9,19 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import * as ReactRedux from 'react-redux';
 import * as Redux from 'redux';
+import { createBrowserHistory } from 'history'
 
 import Root from '~src/Root';
-import store, {history} from './stores';
 import { ConnectedRouter } from 'connected-react-router';
+import configureStore from './configureStore';
 
+
+// We use hash history because this example is going to be hosted statically.
+// Normally you would use browser history.
+const history = createBrowserHistory()
+
+const initialState = window.INITIAL_REDUX_STATE
+const store = configureStore(history, initialState)
 
 ReactDom.render(
     <ReactRedux.Provider store={store}>
