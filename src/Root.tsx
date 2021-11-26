@@ -11,7 +11,7 @@ import {App} from '~src/app/demo/App';
 
 import { BrowserRouter as Router, Redirect, Route, RouteComponentProps, RouteProps } from "react-router-dom";
 import { ErrorPage, Page404 } from '~src/app/pages/ErrorPage';
-import BlogLayout from './app/layout/BlogLayout';
+import BlogLayout, { StoreProps } from './app/layout/BlogLayout';
 
 function mapStateToProps(state: unknown, ownProps: unknown): unknown {
     return {};
@@ -63,7 +63,7 @@ class Root extends React.PureComponent<unknown> {
         return (
             <Router basename={ basePath }>
                 <Route path="/" exact={true} component={App}/>
-                <Route path="/blog" exact={true} component={BlogLayout}/>
+                <Route path="/blog" exact={false} component={(props: RouteComponentProps & StoreProps) => <BlogLayout {...props}/>}/>
                 <Route path="/404" exact={true} component={Page404}/>
             </Router>
         );

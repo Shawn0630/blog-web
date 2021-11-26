@@ -16,12 +16,12 @@ import { login } from "~src/stores/user/user-actions";
 import { RootState } from "~src/stores";
 
 interface BlogHeaderProps {
-    test: boolean
+    test?: boolean
 }
 
 interface StoreProps {
     router: RouterState
-    loggedIn: boolean
+    loggedIn?: boolean
 }
 
 interface DispatchProps {
@@ -52,6 +52,8 @@ export default connect<StoreProps, DispatchProps>(
 
 
     public render(): JSX.Element {
+        const basePath: string = '/blog';
+
         return <Header className={styles.header}>
                 <div className={styles.left}>
                     <img src={Logo} className={styles.logo} />
@@ -68,25 +70,25 @@ export default connect<StoreProps, DispatchProps>(
                 </div>
                 <Menu onClick={this.handleClick} selectedKeys={[this.props.router.location.pathname]} mode="horizontal" className={styles.headerMenu}>
                 <Menu.Item key="home" icon={this.props.router.location.pathname == "home" ? <HomeFilled /> : <HomeOutlined />}>
-                    <Link to="/home">
+                    <Link to={`${basePath}/home`}>
                         Home
                     </Link>
                 </Menu.Item>
                 
                 <Menu.Item key="articles" icon={this.props.router.location.pathname == "articles" ? <ReadFilled /> : <ReadOutlined />}>
-                    <Link to="/articles">
+                    <Link to={`${basePath}/articles`}>
                         Articles
                     </Link>
                 </Menu.Item>
 
                 <Menu.Item key="projects" icon={this.props.router.location.pathname == "projects" ? <AppstoreFilled /> : <AppstoreOutlined />}>
-                    <Link to="/projects">
+                    <Link to={`${basePath}/projects`}>
                     Projects
                     </Link>
                 </Menu.Item>
 
                 <Menu.Item key="about" icon={<UserOutlined />}>
-                    <Link to="/about">
+                    <Link to={`${basePath}/about`}>
                     About Me
                     </Link>
                 </Menu.Item>
