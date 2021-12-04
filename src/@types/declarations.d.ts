@@ -15,6 +15,7 @@ declare module "*.svg" {
 }
 
 declare module '*.png'
+declare module '*.jpg'
 
 interface Window {
   INITIAL_REDUX_STATE: any

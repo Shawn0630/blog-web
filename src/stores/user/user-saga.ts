@@ -12,7 +12,6 @@ function* handleLogin() {
     //   } else {
     //     yield put(loggedin())
     //   }
-
     yield put(loggedin());
     } catch (err) {
       if (err instanceof Error && err.stack) {

@@ -4,10 +4,13 @@ import { RouterState } from "connected-react-router";
 import * as React from "react";
 import { connect, MapStateToProps } from "react-redux";
 import { BrowserRouter as Router, Route, RouteComponentProps } from "react-router-dom";
+import { ArticleProfile } from "~src/models/Article";
 import { RootState } from "~src/stores";
+import ArticleProfileItem from "../component/ArticleProfileItem";
 import BlogHeader from "../component/BlogHeader";
 import { App } from "../demo/App";
 import { ContentDemo } from "../demo/ContentDemo";
+import ArticleLandingPage from "../pages/ArticleLandingPage";
 import * as styles from "./BlogLayout.module.scss";
 
 interface BlogLayoutProps {
@@ -41,7 +44,7 @@ export default connect<StoreProps, undefined>(
                 <Router basename={ basePath } key={this.props.location.pathname}>
                     <Route path="/" exact={true} component={App}/>
                     <Route path="/home" exact={true} component={ContentDemo}/>
-                    <Route path="/articles" exact={true} component={App}/>
+                    <Route path="/articles" exact={true} component={ArticleLandingPage}/>
                     <Route path="/projects" exact={true} component={App}/>
                     <Route path="/about" exact={true} component={App}/>
                 </Router>
