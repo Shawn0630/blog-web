@@ -1,5 +1,5 @@
-import {Theme, createMuiTheme} from '@material-ui/core/styles';
+import {Theme, createTheme} from '@material-ui/core/styles';
 
-const muiThemeCore: Theme = createMuiTheme({});
+const muiThemeCore: Theme = createTheme({});
 
 export {muiThemeCore};

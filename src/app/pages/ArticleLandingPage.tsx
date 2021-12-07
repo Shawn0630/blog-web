@@ -4,6 +4,7 @@ import { ArticleProfile } from "~src/models/Article";
 import { RootState } from "~src/stores";
 import { fetchArticle } from "~src/stores/articles/article-actions";
 import { ArticleActionType } from "~src/stores/articles/types";
+import ArticleProfileItem from "../component/ArticleProfileItem";
 import * as styles from "./ArticleLandingPage.module.scss";
 
 interface ArticleLandingPageProps {
@@ -47,6 +48,10 @@ export default connect<StoreProps, DispatchProps>(
     public render(): JSX.Element {
         return <div className="left">
             <ul className="note-list" id="list">
+                {
+                    this.props.articles?.map((profile: ArticleProfile) =>
+                        <ArticleProfileItem profile={profile} key={`artile-profile-${profile._id}`}/>)
+                }
             </ul>
         </div>
     }

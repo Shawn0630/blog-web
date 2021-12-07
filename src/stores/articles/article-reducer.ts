@@ -20,7 +20,7 @@ const articleReducer = (state = initialState, action: any) => {
       case ArticleActionType.FETCHED_ARTICLE: {
           return {
               ...state,
-              profileList: [...state.profileList, action.payload],
+              profileList: [...state.profileList, ...action.payload],
               isLoading: false,
               isLoadEnd: true
           }
