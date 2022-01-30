@@ -7,6 +7,7 @@ declare namespace BlogHeaderModuleScssNamespace {
         left: string;
         logo: string;
         right: string;
+        rightContent: string;
         title: string;
     }
 }

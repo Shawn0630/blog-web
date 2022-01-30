@@ -60,6 +60,7 @@ export default connect<StoreProps, DispatchProps>(
                     <Title level={5} className={styles.title}>Shawn's Blog</Title>
                 </div>
                 <div className={styles.right}>
+                    <div className={styles.rightContent}> 
                     {
                         this.props.loggedIn ? 
                         <Avatar style={{ backgroundColor: '#f56a00', verticalAlign: 'middle' }} size="large" gap={4}>
@@ -67,6 +68,7 @@ export default connect<StoreProps, DispatchProps>(
                         </Avatar> :
                         <Button type="primary" onClick={this.handleLogin}>Login</Button>
                     }
+                    </div>
                 </div>
                 <Menu onClick={this.handleClick} selectedKeys={[this.props.router.location.pathname]} mode="horizontal" className={styles.headerMenu}>
                 <Menu.Item key="home" icon={this.props.router.location.pathname == "home" ? <HomeFilled /> : <HomeOutlined />}>
