@@ -47,9 +47,9 @@ export default connect<StoreProps, DispatchProps>(
     }
 
     public render(): JSX.Element {
-        return <div className="left">
+        return <div className={styles.content}>
             <TransitionGroup>
-                <ul className="note-list" id="list">
+                <ul className={styles.noteList} id="list">
                     {
                         this.props.articles?.map((profile: ArticleProfile) =>
                             <ArticleProfileItem profile={profile} key={`artile-profile-${profile._id}`}/>)

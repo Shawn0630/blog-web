@@ -21,6 +21,9 @@
     border-bottom: 1px solid #f0f0f0;
     word-wrap: break-word;
     min-height: 140px;
+    .left-container {
+        width: 90%;
+    }
     .abstract {
         min-height: 50px;
         margin: 0 0 8px;
@@ -57,6 +60,27 @@
         color: #b4b4b4;
         }
     }
+    .time {
+        font-size: 12px;
+        color: #969696;
+    }
+    .have-img > div {
+        padding-right: 140px;
+      }
+      .have-img .wrap-img {
+        position: absolute;
+        top: 50%;
+        margin-top: -60px;
+        right: 0;
+        width: 125px;
+        height: 100px;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 4px;
+          border: 1px solid #f0f0f0;
+        }
+      }
 }
 
 .fade-enter.fade-enter-active {
@@ -67,19 +91,3 @@
     opacity: 1;
     transition: opacity 1s ease-in;
 }
-
-
-.zoom-enter {
-    transform: scale(0%);
-    transition: 0.4s linear;
-  }
-  .zoom-enter-active {
-    transform: scale(100%);
-  }
-  .zoom-exit {
-    transform: scale(0%);
-    transition: 0.4s linear;
-  }
-  .zoom-exit-active {
-    transform: sale(100%);
-  }

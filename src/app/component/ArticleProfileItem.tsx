@@ -24,7 +24,7 @@ export default function ArticleProfileItem(props: ArticleProfileProps) {
                     alt="article background"
                     />
                 </a>
-                <div>
+                <div className={styles.leftContainer}>
                     <Link
                     className={styles.title}
                     target="_blank"
@@ -32,7 +32,7 @@ export default function ArticleProfileItem(props: ArticleProfileProps) {
                     >
                     {props.profile.title}
                     </Link>
-                    <p className="abstract">{props.profile.desc}</p>
+                    <p className={styles.abstract}>{props.profile.desc}</p>
                     <div className={styles.meta}>
                     <Link
                         rel="noopener noreferrer"
@@ -52,7 +52,7 @@ export default function ArticleProfileItem(props: ArticleProfileProps) {
                     >
                         <HeartOutlined /> {props.profile.meta.likes}
                     </Link>
-                    <span className="time">
+                    <span className={styles.time}>
                         {props.profile.create_time
                         ? timestampToTime(props.profile.create_time, true)
                         : ''}

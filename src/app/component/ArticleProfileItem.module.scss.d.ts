@@ -7,14 +7,13 @@ declare namespace ArticleProfileItemModuleScssNamespace {
         fadeEnterActive: string;
         fadeExit: string;
         fadeExitActive: string;
+        haveImg: string;
+        leftContainer: string;
         meta: string;
         profileItem: string;
+        time: string;
         title: string;
         wrapImg: string;
-        zoomEnter: string;
-        zoomEnterActive: string;
-        zoomExit: string;
-        zoomExitActive: string;
     }
 }
 
