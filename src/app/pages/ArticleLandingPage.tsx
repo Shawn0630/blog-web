@@ -6,6 +6,7 @@ import { fetchArticle } from "~src/stores/articles/article-actions";
 import { ArticleActionType } from "~src/stores/articles/types";
 import ArticleProfileItem from "../component/ArticleProfileItem";
 import * as styles from "./ArticleLandingPage.module.scss";
+import { TransitionGroup} from 'react-transition-group'
 
 interface ArticleLandingPageProps {
     test?: boolean
@@ -47,12 +48,14 @@ export default connect<StoreProps, DispatchProps>(
 
     public render(): JSX.Element {
         return <div className="left">
-            <ul className="note-list" id="list">
-                {
-                    this.props.articles?.map((profile: ArticleProfile) =>
-                        <ArticleProfileItem profile={profile} key={`artile-profile-${profile._id}`}/>)
-                }
-            </ul>
+            <TransitionGroup>
+                <ul className="note-list" id="list">
+                    {
+                        this.props.articles?.map((profile: ArticleProfile) =>
+                            <ArticleProfileItem profile={profile} key={`artile-profile-${profile._id}`}/>)
+                    }
+                </ul>
+            </TransitionGroup>
         </div>
     }
 })

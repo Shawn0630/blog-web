@@ -3,10 +3,18 @@
 declare namespace ArticleProfileItemModuleScssNamespace {
     export interface IArticleProfileItemModuleScss {
         abstract: string;
+        fadeEnter: string;
+        fadeEnterActive: string;
+        fadeExit: string;
+        fadeExitActive: string;
         meta: string;
         profileItem: string;
         title: string;
         wrapImg: string;
+        zoomEnter: string;
+        zoomEnterActive: string;
+        zoomExit: string;
+        zoomExitActive: string;
     }
 }
 
