@@ -18,6 +18,11 @@ export interface ArticleProfile {
     update_time: string,
 }
 
+export interface ArticleDetail {
+    profile: ArticleProfile,
+    content: string,
+}
+
 export interface ArticleMetaData {
     views: number;
     likes: number;

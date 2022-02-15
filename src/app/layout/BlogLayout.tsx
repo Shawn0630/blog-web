@@ -10,6 +10,7 @@ import ArticleProfileItem from "../component/ArticleProfileItem";
 import BlogHeader from "../component/BlogHeader";
 import { App } from "../demo/App";
 import { ContentDemo } from "../demo/ContentDemo";
+import ArticleDetailPage from "../pages/ArticleDetailPage";
 import ArticleLandingPage from "../pages/ArticleLandingPage";
 import * as styles from "./BlogLayout.module.scss";
 
@@ -45,6 +46,7 @@ export default connect<StoreProps, undefined>(
                     <Route path="/" exact={true} component={App}/>
                     <Route path="/home" exact={true} component={ContentDemo}/>
                     <Route path="/articles" exact={true} component={ArticleLandingPage}/>
+                    <Route path="/markdown" exact={true} component={ArticleDetailPage}/>
                     <Route path="/projects" exact={true} component={App}/>
                     <Route path="/about" exact={true} component={App}/>
                 </Router>
